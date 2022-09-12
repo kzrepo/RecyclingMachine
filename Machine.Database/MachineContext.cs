@@ -12,6 +12,7 @@ namespace Machine.Database
 
         //AdminSite
         public DbSet<ItemParameter> ItemParameter { get; set; } = default!;
+        public DbSet<Voucher>? Voucher { get; set; }
 
         //CustomerPanel
 
