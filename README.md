@@ -63,7 +63,16 @@ application.
 
 - Cans are valued at 2 NOK each.
 - Bottles are valued at 3 NOK each.
-- Inputting a bottle/can should be represented through a UI element, e.g. a button or a console prompt.
+- Inputting a bottle/can should be represented through a UI element, e.g. a buttodsn or a console prompt.
 - For the purposes of this application, it is enough to present the printed voucher on screen.
 - You can assume that all containers have a valid sticker on it for valid identification.
 - The hardware running on the recycling machine is only able to process cans at a rate of 0,5 per second and plastic bottles at a rate of 1 per second.
+
+
+
+## Implementation of the project
+
+### Technical requirements
+
+- The project is created in Visual Studio 2022 Version 17.3.3
+- Version .NET 6.0
