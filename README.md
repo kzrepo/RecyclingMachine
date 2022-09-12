@@ -43,7 +43,7 @@
 - [ ] Database project
   - [x] ItemParameter - a table for storing the information needed to validate the inserted bottle or can
   - [ ] ReturnedItem - a table with all returned items
-  - [ ] Voucher - a table with printet vouchers
+  - [x] Voucher - a table with printet vouchers
 - [ ] Admin site project
   - [x] Manage item parameters
   - [ ] Show table with returned items
