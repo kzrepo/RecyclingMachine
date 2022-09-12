@@ -30,6 +30,40 @@
 
 
 
+## Implementation of the project
+
+### Technical requirements
+
+- The project is created in Visual Studio 2022 Version 17.3.3
+- Version .NET 6.0
+- Database - Code-First approach
+
+### Project elements
+
+- [ ] Database project
+  - [x] ItemParameter - a table for storing the information needed to validate the inserted bottle or can
+  - [ ] ReturnedItem - a table with all returned items
+  - [ ] Voucher - a table with printet vouchers
+- [ ] Admin site project
+  - [x] Manage item parameters
+  - [ ] Show table with returned items
+  - [ ] Show table with Vouchers
+  - [ ] Page with statistics
+- [ ] Customer panel project
+  - [ ] Text UI
+  - [ ] Graphic UI
+- [ ] Business logic project
+  - [ ] Admin site
+  - [ ] Customer panel
+- [ ] Seeds
+  - [ ] Default ItemParameter values
+  - [ ] Sample data with voucher and returned items
+- [ ] Login to Admin site
+- [ ] Test project
+  - [ ] Unit tests
+
+
+
 ## Technical Assignment
 
 ### Task Details
@@ -67,12 +101,3 @@ application.
 - For the purposes of this application, it is enough to present the printed voucher on screen.
 - You can assume that all containers have a valid sticker on it for valid identification.
 - The hardware running on the recycling machine is only able to process cans at a rate of 0,5 per second and plastic bottles at a rate of 1 per second.
-
-
-
-## Implementation of the project
-
-### Technical requirements
-
-- The project is created in Visual Studio 2022 Version 17.3.3
-- Version .NET 6.0

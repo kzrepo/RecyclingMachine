@@ -1,0 +1,53 @@
+﻿@model IEnumerable<Machine.Database.Data.AdminSite.ItemParameter>
+
+@{
+    ViewData["Title"] = "Parameters";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ItemType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ParameterType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Value)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Note)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ItemType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ParameterType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Value)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Note)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.IdParameter">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.IdParameter">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.IdParameter">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
