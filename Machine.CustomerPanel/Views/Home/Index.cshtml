@@ -1,20 +1,58 @@
-﻿@{
+﻿@model Machine.Database.Data.AdminSite.Voucher
+
+@{
     ViewData["Title"] = "Customer Panel";
 }
+
 <div class="machine-display">
     <div class="display-left">
     </div>
     <div class="display-middle">
         <div class="display-middle-top">
+            <div class="machine-announcement">
+                @if(Model == null)
+                {
+                    <div>
+                        Click on the<br><span class="annoumcement-distinction">START</span><br> button to start
+                    </div>
+                }
+                else
+                {
+                    <div>
+                        Select the <br>type of<br><span class="annoumcement-distinction">packaging</span><br> in the left panel
+                    </div>
+                }
+            </div>
+            <div class="active-voucher">
+                @if(Model == null)
+                {
+                    <div>
+                        Waiting...
+                    </div>
+                }
+                else
+                {
+                    <div>
+                        Active Voucher: @Model.IdVoucher
+                    </div>
+                }
+            </div>
         </div>
         <div class="display-middle-bottom">
-            @{
-                // TODO: Add a change to active buttons and actions when a session is active
+            @if(Model == null)
+            {
+                <form>
+                    <button type="submit" asp-action="AddNewVoucher" asp-controller="Voucher" class="button-machine button-start">START</button>
+                </form>
+                <div class="button-machine button-stop button-disabled">STOP</div>
             }
-            <form>
-                <button type="submit" asp-action="Create" class="button-machine button-start">START</button>
-            </form>
-            <div class="button-machine button-stop button-disabled">STOP</div>
+            else
+            {
+                <div class="button-machine button-start button-disabled">START</div>
+                <form>
+                    <button type="submit" asp-action="FinishVoucher" asp-controller="Voucher" class="button-machine button-stop">STOP</button>
+                </form>
+            }
         </div>
     </div>
     <div class="display-right">

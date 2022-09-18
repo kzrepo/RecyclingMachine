@@ -36,10 +36,10 @@ body {
     LEFT DISPLAY 
 ------------------------------------ */
 
-.display-left{
-    width:200px;
+.display-left {
+    width: 200px;
     height: 600px;
-    background-color:lightblue;
+    background-color: lightblue;
 }
 
 
@@ -56,12 +56,33 @@ body {
     background-color: gray;
 }
 
+/* Middle top */
+
 .display-middle-top {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
     margin: 50px;
     height: 300px;
     background-color: lightgrey;
 }
 
+.machine-announcement {
+    margin: 50px 25px;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.annoumcement-distinction{
+    font-size: 2rem;
+}
+
+.active-voucher {
+    margin: 15px 0px;
+}
+
+/* Middle bottom */
 .display-middle-bottom {
     display: flex;
     gap: 15px;
@@ -82,7 +103,7 @@ body {
     border: 1px solid lightgray;
 }
 
-.button-start{
+.button-start {
     background-color: green;
 }
 

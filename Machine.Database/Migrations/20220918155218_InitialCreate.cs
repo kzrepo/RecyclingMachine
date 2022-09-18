@@ -30,13 +30,26 @@ namespace Machine.Database.Migrations
                 {
                     IdVoucher = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    Session = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Start = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    End = table.Column<DateTime>(type: "datetime2", nullable: false)
+                    IsActive = table.Column<bool>(type: "bit", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Voucher", x => x.IdVoucher);
+                });
+
+            migrationBuilder.InsertData(
+                table: "ItemParameter",
+                columns: new[] { "IdParameter", "ItemType", "Note", "ParameterType", "Value" },
+                values: new object[,]
+                {
+                    { 1, "bottle", "Maximum bottle weight (g)", "weight", "30" },
+                    { 2, "can", "Maximum can weight (g)", "weight", "20" },
+                    { 3, "bottle", "Plastic bottle processing time (milliseconds)", "processing", "1000" },
+                    { 4, "can", "Plastic can processing time (milliseconds)", "processing", "500" },
+                    { 5, "bottle", "Price of the returned bottle (NOK)", "price", "3" },
+                    { 6, "can", "Price of the returned can (NOK)", "price", "2" },
+                    { 7, "bottle", "The manufacturer from which we accept the bottles", "manufacturer", "GoodSugar" },
+                    { 8, "can", "The manufacturer from which we accept the cans", "manufacturer", "NaturalDrinks" }
                 });
         }
 

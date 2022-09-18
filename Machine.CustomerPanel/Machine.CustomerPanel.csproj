@@ -16,6 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Machine.BusinessLogic\Machine.BusinessLogic.csproj" />
     <ProjectReference Include="..\Machine.Database\Machine.Database.csproj" />
   </ItemGroup>
 
