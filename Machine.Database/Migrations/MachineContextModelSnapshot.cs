@@ -61,7 +61,14 @@ namespace Machine.Database.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("IdVoucher"), 1L, 1);
 
-                    b.Property<DateTime>("Create")
+                    b.Property<DateTime>("End")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Session")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("Start")
                         .HasColumnType("datetime2");
 
                     b.HasKey("IdVoucher");

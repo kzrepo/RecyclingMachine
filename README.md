@@ -47,7 +47,7 @@
 - [ ] Admin site project
   - [x] Manage item parameters
   - [ ] Show table with returned items
-  - [ ] Show table with Vouchers
+  - [x] Show table with Vouchers
   - [ ] Page with statistics
 - [ ] Customer panel project
   - [ ] Text UI

@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Machine.Database.Migrations
 {
     [DbContext(typeof(MachineContext))]
-    [Migration("20220912100012_CreateVoucherTable")]
-    partial class CreateVoucherTable
+    [Migration("20220918064947_InitialCreate")]
+    partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -63,7 +63,14 @@ namespace Machine.Database.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("IdVoucher"), 1L, 1);
 
-                    b.Property<DateTime>("Create")
+                    b.Property<DateTime>("End")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Session")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("Start")
                         .HasColumnType("datetime2");
 
                     b.HasKey("IdVoucher");
