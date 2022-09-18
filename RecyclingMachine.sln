@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Machine.AdminSite", "Machin
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Machine.CustomerPanel", "Machine.CustomerPanel\Machine.CustomerPanel.csproj", "{F8545BF3-1E1F-4B24-A13D-4FB1844B6876}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Machine.BusinessLogic", "Machine.BusinessLogic\Machine.BusinessLogic.csproj", "{03C9BEB2-5882-4873-B9DA-421CB142813B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{F8545BF3-1E1F-4B24-A13D-4FB1844B6876}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F8545BF3-1E1F-4B24-A13D-4FB1844B6876}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F8545BF3-1E1F-4B24-A13D-4FB1844B6876}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03C9BEB2-5882-4873-B9DA-421CB142813B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03C9BEB2-5882-4873-B9DA-421CB142813B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03C9BEB2-5882-4873-B9DA-421CB142813B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03C9BEB2-5882-4873-B9DA-421CB142813B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
