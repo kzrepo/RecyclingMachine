@@ -13,7 +13,7 @@ namespace Machine.AdminSite.Controllers
             _context = context;
         }
 
-        // GET: ItemParameters
+        // GET: Voucher
         public async Task<IActionResult> Index()
         {
             return _context.Voucher != null ?

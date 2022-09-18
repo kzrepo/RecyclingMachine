@@ -1,4 +1,10 @@
+using Machine.Database;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddDbContext<MachineContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("MachineContext") ?? throw new InvalidOperationException("Connection string 'MachineContext' not found.")));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();

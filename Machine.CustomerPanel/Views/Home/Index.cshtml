@@ -1,22 +1,22 @@
 ﻿@{
     ViewData["Title"] = "Customer Panel";
 }
-
-<div class="display-left">
-    
-</div>
-<div class="display-middle">
-    <div class="display-middle-top">
+<div class="machine-display">
+    <div class="display-left">
     </div>
-    <div class="display-middle-bottom">
-        <div class="button-machine button-start">
-            START
+    <div class="display-middle">
+        <div class="display-middle-top">
         </div>
-        <div class="button-machine button-stop">
-            STOP
+        <div class="display-middle-bottom">
+            @{
+                // TODO: Add a change to active buttons and actions when a session is active
+            }
+            <form>
+                <button type="submit" asp-action="Create" class="button-machine button-start">START</button>
+            </form>
+            <div class="button-machine button-stop button-disabled">STOP</div>
         </div>
     </div>
-</div>
-<div class="display-right">
-    
+    <div class="display-right">
+    </div>
 </div>
