@@ -13,32 +13,21 @@
                 @Html.DisplayNameFor(model => model.IdVoucher)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Session)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Start)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.End)
+                @Html.DisplayNameFor(model => model.IsActive)
             </th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.IdVoucher)
-            </td>
+        @foreach(var item in Model)
+        {
+            <tr>
                 <td>
-                    @Html.DisplayFor(modelItem => item.Session)
+                    @Html.DisplayFor(modelItem => item.IdVoucher)
                 </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Start)
-            </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.End)
+                    @Html.DisplayFor(modelItem => item.IsActive)
                 </td>
-        </tr>
-}
+            </tr>
+        }
     </tbody>
 </table>
