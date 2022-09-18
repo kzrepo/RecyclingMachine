@@ -1,0 +1,14 @@
+﻿@model IEnumerable<Machine.Database.Data.AdminSite.ItemParameter>
+
+<div class="display-side-top">
+    <div class="display-side-top-title">
+        Menu packaging
+    </div>
+    <ul>
+
+        @foreach(var item in Model)
+        {
+            <li>@item.ItemType, @item.ParameterType, @item.Value</li>
+        }
+    </ul>
+</div>

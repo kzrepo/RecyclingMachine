@@ -11,7 +11,7 @@ namespace Machine.Database
         }
 
         //AdminSite
-        public DbSet<ItemParameter> ItemParameter { get; set; } = default!;
+        public DbSet<ItemParameter>? ItemParameter { get; set; }
         public DbSet<Voucher>? Voucher { get; set; }
 
         //Data Seeding

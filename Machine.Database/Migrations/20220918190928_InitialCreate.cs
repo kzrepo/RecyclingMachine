@@ -30,7 +30,8 @@ namespace Machine.Database.Migrations
                 {
                     IdVoucher = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    IsActive = table.Column<bool>(type: "bit", nullable: false)
+                    IsActive = table.Column<bool>(type: "bit", nullable: false),
+                    IsPrinted = table.Column<bool>(type: "bit", nullable: false)
                 },
                 constraints: table =>
                 {

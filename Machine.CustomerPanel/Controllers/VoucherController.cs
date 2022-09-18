@@ -27,5 +27,13 @@ namespace Machine.CustomerPanel.Controllers
 
             return RedirectToAction("Index", "Home");
         }
+
+        public IActionResult PrintVoucher()
+        {
+            VoucherLogic voucherLogic = new(_context);
+            voucherLogic.PrintVoucher();
+
+            return RedirectToAction("Index", "Home");
+        }
     }
 }

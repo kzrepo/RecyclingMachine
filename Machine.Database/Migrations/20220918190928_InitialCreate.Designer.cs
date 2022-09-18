@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Machine.Database.Migrations
 {
     [DbContext(typeof(MachineContext))]
-    [Migration("20220918155218_InitialCreate")]
+    [Migration("20220918190928_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -129,6 +129,9 @@ namespace Machine.Database.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("IdVoucher"), 1L, 1);
 
                     b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsPrinted")
                         .HasColumnType("bit");
 
                     b.HasKey("IdVoucher");

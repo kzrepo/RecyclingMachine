@@ -1,0 +1,12 @@
+﻿@model Machine.Database.Data.AdminSite.Voucher
+
+@if(!Model.IsActive)
+{
+    <div class="button-machine button-put-on button-disabled">PUT ON</div>
+}
+else
+{
+    <form>
+        <button type="submit" asp-action="FinishVoucher" asp-controller="Voucher" class="button-machine button-put-on">PUT ON</button>
+    </form>
+}

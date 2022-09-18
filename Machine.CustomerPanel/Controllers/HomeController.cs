@@ -17,7 +17,7 @@ namespace Machine.CustomerPanel.Controllers
 
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Voucher!.Where(v => v.IsActive == true).FirstOrDefaultAsync());
+            return View(await _context.Voucher!.OrderBy(v => v.IdVoucher).LastOrDefaultAsync());
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

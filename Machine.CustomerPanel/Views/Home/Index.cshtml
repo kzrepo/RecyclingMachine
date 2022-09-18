@@ -5,12 +5,22 @@
 }
 
 <div class="machine-display">
-    <div class="display-left">
+    <div class="display-left machine-display-frame">
+        @await Component.InvokeAsync("TypeOfPackagingComponent")
+        <div class="display-left-bottom">
+            @await Html.PartialAsync("PutOnButton")
+        </div>
     </div>
-    <div class="display-middle">
+    <div class="display-middle machine-display-frame">
         <div class="display-middle-top">
             <div class="machine-announcement">
-                @if(Model == null)
+                @if(!Model.IsActive && !Model.IsPrinted)
+                {
+                    <div>
+                        Print the <br><span class="annoumcement-distinction">Voucher</span><br>and use<br>at checkout
+                    </div>
+                }
+                else if(!Model.IsActive)
                 {
                     <div>
                         Click on the<br><span class="annoumcement-distinction">START</span><br> button to start
@@ -24,7 +34,7 @@
                 }
             </div>
             <div class="active-voucher">
-                @if(Model == null)
+                @if(!Model.IsActive)
                 {
                     <div>
                         Waiting...
@@ -38,8 +48,13 @@
                 }
             </div>
         </div>
-        <div class="display-middle-bottom">
-            @if(Model == null)
+        <div class="display-middle-bottom ">
+            @if(!Model.IsActive && !Model.IsPrinted)
+            {
+                <div class="button-machine button-start button-disabled">START</div>
+                <div class="button-machine button-stop button-disabled">STOP</div>
+            }
+            else if(!Model.IsActive)
             {
                 <form>
                     <button type="submit" asp-action="AddNewVoucher" asp-controller="Voucher" class="button-machine button-start">START</button>
@@ -53,8 +68,13 @@
                     <button type="submit" asp-action="FinishVoucher" asp-controller="Voucher" class="button-machine button-stop">STOP</button>
                 </form>
             }
+
         </div>
     </div>
-    <div class="display-right">
+    <div class="display-right machine-display-frame">
+        @await Component.InvokeAsync("VoucherDetailsComponent")
+        <div class="display-right-bottom">
+            @await Html.PartialAsync("PrintButton")
+        </div>
     </div>
 </div>

@@ -24,12 +24,28 @@ namespace Machine.BusinessLogic.CustomerPanel
         public void FinishVoucher()
         {
             var tempVoucher = _context.Voucher!
-                .Where(v => v.IsActive == true)
-                .FirstOrDefault();
+                .OrderBy(v => v.IdVoucher)
+                .LastOrDefault();
 
             if(tempVoucher != null)
             {
-                tempVoucher.IsActive = false;
+                if(tempVoucher.IsActive && !tempVoucher.IsPrinted)
+                    tempVoucher.IsActive = false;
+            };
+
+            _context.SaveChanges();
+        }
+
+        public void PrintVoucher()
+        {
+            var tempVoucher = _context.Voucher!
+                .OrderBy(v => v.IdVoucher)
+                .LastOrDefault();
+
+            if(tempVoucher != null)
+            {
+                if(!tempVoucher.IsActive && !tempVoucher.IsPrinted)
+                    tempVoucher.IsPrinted = true;
             };
 
             _context.SaveChanges();

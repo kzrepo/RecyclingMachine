@@ -1,0 +1,12 @@
+﻿@model Machine.Database.Data.AdminSite.Voucher
+
+@if(!Model.IsActive && !Model.IsPrinted)
+{
+    <form>
+        <button type="submit" asp-action="PrintVoucher" asp-controller="Voucher" class="button-machine button-print">PRINT</button>
+    </form> 
+}
+else
+{
+    <div class="button-machine button-print button-disabled">PRINT</div>
+}

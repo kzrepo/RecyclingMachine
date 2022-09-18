@@ -129,6 +129,9 @@ namespace Machine.Database.Migrations
                     b.Property<bool>("IsActive")
                         .HasColumnType("bit");
 
+                    b.Property<bool>("IsPrinted")
+                        .HasColumnType("bit");
+
                     b.HasKey("IdVoucher");
 
                     b.ToTable("Voucher");

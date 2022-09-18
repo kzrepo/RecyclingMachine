@@ -10,8 +10,10 @@ namespace Machine.Database.Data.AdminSite
         [Display(Name = "Voucher number")]
         public int IdVoucher { get; set; }
 
-        [Required(ErrorMessage = "Set Voucher is active")]
         [Display(Name = "Voucher active")]
         public bool IsActive { get; set; }
+
+        [Display(Name = "Voucher printed")]
+        public bool IsPrinted { get; set; }
     }
 }

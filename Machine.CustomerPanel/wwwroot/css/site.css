@@ -17,13 +17,6 @@ body {
     justify-content: space-between;
 }
 
-.machine-display {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-}
-
 .machine-footer {
     padding: 1.5rem;
     background-color: lightgray;
@@ -32,15 +25,86 @@ body {
 }
 
 
+
+/* ------------------------------------
+    DISPLAY 
+------------------------------------ */
+
+.machine-display {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.machine-display-frame{
+    padding: 40px 30px;
+}
+
+.display-side-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 380px;
+    background-color: lightgrey;
+    padding: 20px 15px;
+}
+
+.display-side-top-title{
+    font-size: 1.2rem;
+    margin-bottom:10px;
+    font-weight: bold;
+}
+
+.button-machine {
+    padding: 15px;
+    width: 130px;
+    font-size: 1.5rem;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    text-align: center;
+    border: 1px solid lightgray;
+}
+
+.button-disabled {
+    opacity: 0.3;
+    cursor: not-allowed !important;
+}
+
+
+
 /* ------------------------------------
     LEFT DISPLAY 
 ------------------------------------ */
 
 .display-left {
-    width: 200px;
+    width: 300px;
     height: 600px;
     background-color: lightblue;
+    background-color: gray;
+    border-right: 1px solid;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
+
+.display-left-bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    align-content: stretch;
+    margin-bottom: 25px;
+}
+
+.button-put-on {
+    background-color: rgb(80, 80, 80);
+}
+
 
 
 /* ------------------------------------
@@ -63,7 +127,6 @@ body {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    margin: 50px;
     height: 300px;
     background-color: lightgrey;
 }
@@ -83,24 +146,15 @@ body {
 }
 
 /* Middle bottom */
+
 .display-middle-bottom {
     display: flex;
+    flex-direction:column;
     gap: 15px;
     justify-content: center;
     align-items: center;
     align-content: stretch;
-    margin-bottom: 50px;
-}
-
-.button-machine {
-    padding: 10px;
-    width: 110px;
-    font-size: 1.5rem;
-    color: white;
-    font-weight: bold;
-    border-radius: 10px;
-    text-align: center;
-    border: 1px solid lightgray;
+    margin-bottom: 25px;
 }
 
 .button-start {
@@ -111,11 +165,6 @@ body {
     background-color: red;
 }
 
-.button-disabled {
-    opacity: 0.3;
-    cursor: not-allowed !important;
-}
-
 
 
 /* ------------------------------------
@@ -123,7 +172,27 @@ body {
 -------------------------------------*/
 
 .display-right {
-    width: 200px;
+    width: 300px;
     height: 600px;
-    background-color: lightblue;
+    background-color: gray;
+    border-left: 1px solid;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.display-right-bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    align-content: stretch;
+    margin-bottom: 25px;
+}
+
+.button-print {
+    background-color: rgb(80, 80, 80);
 }
