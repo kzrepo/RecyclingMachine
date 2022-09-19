@@ -1,17 +1,12 @@
-﻿using Machine.Database;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Mvc;
 
 namespace Machine.CustomerPanel.Controllers.Components
 {
     public class TypeOfPackagingComponent : ViewComponent
     {
-        private readonly MachineContext _context;
-        public TypeOfPackagingComponent(MachineContext context) => _context = context;
-
-        public async Task<IViewComponentResult> InvokeAsync()
+        public IViewComponentResult Invoke()
         {
-            return View("TypeOfPackagingComponent", await _context.ItemParameter!.ToListAsync());
+            return View("TypeOfPackagingComponent");
         }
     }
 }

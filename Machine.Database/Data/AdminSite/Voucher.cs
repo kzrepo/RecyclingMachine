@@ -15,5 +15,7 @@ namespace Machine.Database.Data.AdminSite
 
         [Display(Name = "Voucher printed")]
         public bool IsPrinted { get; set; }
+
+        public List<ReturnedItem>? ReturndItems { get; set; }
     }
 }

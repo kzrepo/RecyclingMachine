@@ -13,12 +13,12 @@ namespace Machine.Database.Data.AdminSite
         [Display(Name = "Item Type")]
         public string? ItemType { get; set; }
 
-        [Required(ErrorMessage = "Parameter type: weight, manufacturer, size, material, processing, cena")]
+        [Required(ErrorMessage = "Parameter type: weight, manufacturer, size, material, processing, price")]
         [MaxLength(20, ErrorMessage = "weight / manufacturer / size / material / processing / price")]
         [Display(Name = "Parameter Type")]
         public string? ParameterType { get; set; }
 
-        [Required(ErrorMessage = "Parameter value: weight (g), manufacturer name, size (mm), material type (glass, aluminium, plastic), time (milliseconds), price (kr)")]
+        [Required(ErrorMessage = "Parameter value: weight (g), manufacturer name, size (mm), material type (glass, aluminium, plastic), time (milliseconds), price (NOK)")]
         [MaxLength(30, ErrorMessage = "The value should contain max 30 characters")]
         public string? Value { get; set; }
 

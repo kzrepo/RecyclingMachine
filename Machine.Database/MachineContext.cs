@@ -13,6 +13,7 @@ namespace Machine.Database
         //AdminSite
         public DbSet<ItemParameter>? ItemParameter { get; set; }
         public DbSet<Voucher>? Voucher { get; set; }
+        public DbSet<ReturnedItem>? ReturnedItem { get; set; }
 
         //Data Seeding
         protected override void OnModelCreating(ModelBuilder modelBuilder)

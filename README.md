@@ -50,13 +50,13 @@
   - [x] Show table with Vouchers
   - [ ] Page with statistics
 - [ ] Customer panel project
-  - [ ] Text UI
-  - [ ] Graphic UI
+  - [x] Text UI
+  - [x] Graphic UI
 - [ ] Business logic project
   - [ ] Admin site
-  - [ ] Customer panel
+  - [x] Customer panel
 - [ ] Seeds
-  - [ ] Default ItemParameter values
+  - [x] Default ItemParameter values
   - [ ] Sample data with voucher and returned items
 - [ ] Login to Admin site
 - [ ] Test project
