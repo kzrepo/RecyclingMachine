@@ -33,7 +33,7 @@ namespace Machine.CustomerPanel.Controllers
             VoucherLogic voucherLogic = new(_context);
             voucherLogic.PrintVoucher();
 
-            return RedirectToAction("Index", "Home");
+            return RedirectToAction("Index", "PrintVoucher");
         }
     }
 }
