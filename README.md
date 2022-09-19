@@ -104,26 +104,35 @@ application.
 
 ## Project Status
 
-1. Start
+### Tasks to be done
+
+1. Adding packages to an active Voucher
+2. Dynamic updating of data on the Voucher Summary
+3. Statistics on the Admin page
+4. Graphical interface improvements
+
+### Screenshots
+
+1. Start  
 ![](docs/1-start.png)
 
-2. Active voucher
+2. Active voucher  
 ![](docs/2-active-voucher.png)
 
-3. Add packaging
+3. Add packaging  
 ![](docs/3-add-packaging.png)
 
-4. Finish adn print voucher
+4. Finish adn print voucher  
 ![](docs/4-finish-and-print.png)
 
-5. Print Voucher
+5. Print Voucher  
 ![](docs/5-print-voucher.png)
 
-6. Admin statistics
+6. Admin statistics  
 ![](docs/6-admin-statistics.png)
 
-7. Item parameters
+7. Item parameters  
 ![](docs/7-item-parameters.png)
 
-8. Vouchers
+8. Vouchers  
 ![](docs/8-vouchers.png)
