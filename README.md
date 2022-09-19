@@ -42,7 +42,7 @@
 
 - [ ] Database project
   - [x] ItemParameter - a table for storing the information needed to validate the inserted bottle or can
-  - [ ] ReturnedItem - a table with all returned items
+  - [x] ReturnedItem - a table with all returned items
   - [x] Voucher - a table with printet vouchers
 - [ ] Admin site project
   - [x] Manage item parameters
@@ -101,3 +101,29 @@ application.
 - For the purposes of this application, it is enough to present the printed voucher on screen.
 - You can assume that all containers have a valid sticker on it for valid identification.
 - The hardware running on the recycling machine is only able to process cans at a rate of 0,5 per second and plastic bottles at a rate of 1 per second.
+
+## Project Status
+
+1. Start
+![](docs/1-start.png)
+
+2. Active voucher
+![](docs/2-active-voucher.png)
+
+3. Add packaging
+![](docs/3-add-packaging.png)
+
+4. Finish adn print voucher
+![](docs/4-finish-and-print.png)
+
+5. Print Voucher
+![](docs/5-print-voucher.png)
+
+6. Admin statistics
+![](docs/6-admin-statistics.png)
+
+7. Item parameters
+![](docs/7-item-parameters.png)
+
+8. Vouchers
+![](docs/8-vouchers.png)

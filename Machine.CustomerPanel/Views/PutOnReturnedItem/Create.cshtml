@@ -1,0 +1,40 @@
+﻿@model Machine.Database.Data.AdminSite.ReturnedItem
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div class="machine-display">
+    <div class="put-on-returned-item">
+        <div class="put-on-returned-item-input">
+            <h2>Put on<br>Packaging</h2>
+            <form asp-action="Create">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="IdVoucher" class="control-label"></label>
+                    <input asp-for="IdVoucher" class="form-control" />
+                    <span asp-validation-for="IdVoucher" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="ItemType" class="control-label"></label>
+                    <input asp-for="ItemType" class="form-control" />
+                    <span asp-validation-for="ItemType" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Price" class="control-label"></label>
+                    <input asp-for="Price" class="form-control" />
+                    <span asp-validation-for="Price" class="text-danger"></span>
+                </div>
+            </form>
+            <div class="form-group">
+                <input type="submit" value="ACCEPT" class="button-machine button-put-on" />
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    }

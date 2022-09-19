@@ -1,35 +1,9 @@
-﻿@*@model IEnumerable<Machine.Database.Data.AdminSite.ItemParameter>
-
-<div class="display-side-top">
+﻿<div class="display-side-top">
     <div class="display-side-top-title">
-        Menu packaging
+        PACKAGING
     </div>
-    <ul>
-
-        @foreach(var item in Model)
-        {
-            <li>@item.ItemType, @item.ParameterType, @item.Value</li>
-        }
-    </ul>
-</div>*@
-
-<div class="display-side-top">
-    <div class="display-side-top-title">
-        Menu packaging
+    <div>
+        To return the package,<br />press the button<br />at the bottom.
     </div>
-    <form action="/Home/Create" id="packaging-menu" method="post" novalidate="novalidate">
-        <div class="form-check">
-            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-            <label class="form-check-label" for="flexRadioDefault1">
-                Default radio
-            </label>
-        </div>
-        <div class="form-check">
-            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-            <label class="form-check-label" for="flexRadioDefault2">
-                Default checked radio
-            </label>
-        </div>
-    </form>
 </div>
 
